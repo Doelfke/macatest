@@ -1,0 +1,35 @@
+@import '../../core/colors.scss';
+
+.container {
+    margin-bottom: 16px;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 50px;
+    border: 1px solid $neutral-gray-2;
+    margin: 0 6px 8px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.labelChecked {
+    border-color: transparent;
+    background-color: $primary-brand-blue;
+    color: $utility-white;
+}
+
+.input {
+    display: none;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.subTitle {
+    margin-bottom: 10px;
+    color: $neutral-gray-5;
+   
+}

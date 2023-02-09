@@ -1,0 +1,8 @@
+@import '../core/breakpoints.scss';
+
+.maxWidth {
+    @include widescreen {
+        width: 120%;
+        margin-left: -10%;
+    }
+}

@@ -1,0 +1,13 @@
+@import '../../colors.scss';
+
+
+.linkButton {
+    background: transparent;
+    border: none;
+    color: $primary-accent-blue;
+
+    &:hover {
+        color: $primary-brand-blue;
+    }
+}
+

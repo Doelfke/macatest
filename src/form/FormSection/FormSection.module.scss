@@ -1,0 +1,60 @@
+@import '../../core/colors.scss';
+@import '../../core/breakpoints.scss';
+
+.container {
+    margin: 0 auto;
+
+    @include widescreen {
+        width: 70%;
+    }
+
+    &.full {
+        @include widescreen {
+            width: 83%;
+        }
+    }
+}
+
+.subContainer {
+    @include widescreen {
+        width: 80%;
+    }
+    margin: 0 auto;
+}
+
+.titles {
+    display: inline-block;
+    width: 70%;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.subTitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    color: $neutral-gray-5;
+}
+
+.rightContol {
+    display: block;
+    margin-top: 8px;
+
+    @include widescreen {
+        display: inline-block;
+        margin-top: 0;
+        width: 30%;
+        vertical-align: bottom;
+        text-align: right;
+    }
+}
+
+.spacer {
+    margin-bottom: 16px;
+}
+
+.sectionSpacer {
+    margin-bottom: 128px;
+}

@@ -1,0 +1,72 @@
+@import '../../colors.scss';
+
+.button {
+    border: none;
+    user-select: none;
+}
+
+/* 
+    ----------------
+         Sizes
+    ----------------
+*/
+
+.buttonSmall {
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.buttonLarge {
+    padding: 16px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 
+    ----------------
+    Types And States
+    ----------------
+*/
+
+.buttonPrimary {
+    border: 1px solid $primary-success-green;
+    background-color: $primary-success-green;
+    color: $utility-white;
+
+    &:disabled {
+        border: 1px solid $neutral-gray-4;
+        color: $neutral-gray-4;
+        background-color: $neutral-gray-1;
+    }
+    &:active {
+        border: 1px solid $green-active;
+        background-color: $green-active;
+    }
+}
+
+
+
+.buttonSecondary {
+    background-color: $utility-white;
+    border: 1px solid $neutral-gray-9;
+
+    &:disabled {
+        border: 1px solid $neutral-gray-4;
+        background-color: $neutral-gray-0;
+        color: $neutral-gray-4;
+    }
+
+    &:active {
+        background: $neutral-gray-9;
+        color: $utility-white;
+    }
+}
+
+/* 
+    ----------------
+         Other
+    ----------------
+*/
+.buttonFullWidth {
+    width: 100%;
+}

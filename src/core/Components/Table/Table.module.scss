@@ -1,0 +1,153 @@
+@import '../../colors.scss';
+@import '../../breakpoints.scss';
+
+.table {
+    width: 100%;
+
+    table {
+        width: 100%;
+    }
+
+    thead {
+        text-align: left;
+        color: $utility-white;
+    }
+
+    thead th {
+        padding: 16px;
+        border: 1px solid $neutral-gray-7;
+        background: $neutral-gray-8;
+    }
+
+    tbody td {
+        border: 1px solid $neutral-gray-2;
+        font-size: 16px;
+    }
+
+    :global {
+        tbody td.pad {
+            padding: 8px 16px;
+        }
+
+        @include not-widescreen {
+            tbody td.hideMobile {
+                display: none;
+            }
+            thead th.hideMobile {
+                display: none;
+            }
+        }
+    }
+
+    .altRow { 
+        background-color: $neutral-gray-0;
+    }
+
+    tbody td .draggable {
+        cursor: move;
+    }
+
+    .expandable {
+        color: $primary-accent-blue;
+        text-decoration: underline;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .dropping {
+        border-top: 3px solid $primary-accent-blue;
+    }
+
+    .expanded {
+        position: relative;
+        background-color: $primary-accent-blue;
+        border-color: $primary-accent-blue;
+        color: $utility-white;
+        text-decoration: underline;
+        cursor: pointer;
+        user-select: none;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: calc(50% - 20px);
+            top: 35px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $primary-accent-blue;
+            clear: both;
+            z-index: 1;
+       }
+    }
+
+    .expandedRowContainer {
+        position: relative;
+    }
+
+    .expandedRowClose {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        color: $utility-white;
+        cursor: pointer;
+    }
+
+    .expandedRow {
+         > td {
+             border: none;
+             > div {
+                border: 2px solid $primary-accent-blue;
+             }
+        }
+    }
+
+    :global {
+        .ant-table-row-expand-icon-cell {
+            display: none;
+        }
+
+        .ant-table-placeholder .ant-table-cell {
+            padding: 50px;
+            font-size: 18px;
+            background-color: $neutral-gray-0;
+            text-align: center;
+        }
+
+        .ant-table-column-sorter {
+            float: right;
+            cursor: pointer;
+
+            .ant-table-column-sorter-inner {
+                position: relative;
+                right: 8px;
+            }
+            .ant-table-column-sorter-up {
+                position: absolute;
+                top: -5px;
+            }
+            .ant-table-column-sorter-down {
+                position: absolute;
+                top: 5px;
+            }
+        }
+
+        .ant-empty-image {
+            display: none;
+        }
+
+        tbody td.noHeader,  thead th.noHeader {
+            border: 1px solid transparent;
+            background-color: transparent !important;
+        }
+
+        tbody td.noHeader:first-of-type {
+            border-right: 1px solid $neutral-gray-2
+        }
+        
+        thead th.noHeader:first-of-type { 
+            border-right: 1px solid $neutral-gray-7
+        }
+    }
+}

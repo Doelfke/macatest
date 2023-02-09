@@ -1,0 +1,60 @@
+@import '../colors.scss';
+@import '../../core/breakpoints.scss';
+
+.category {
+    color: $neutral-gray-5 !important;
+}
+
+.category + .category {
+    margin-top: 20px;
+}
+
+.link {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px !important;
+    color: $neutral-gray-9 !important;
+}
+
+.linkSelected {
+    color: $utility-white !important;
+    background: $primary-brand-blue;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0px #ccc;
+}
+
+.logout {
+    position: absolute;
+    left: 22px;
+    bottom: 66px;
+}
+
+// SECONDARY 
+
+.secondaryContainer {
+    @include desktop {
+        height: 59px;
+        margin-left: -21px;
+    }
+    margin-top: -16px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid $neutral-gray-2;
+}
+
+.secondaryLink {
+    display: block;
+    @include desktop {
+        display: inline-block;
+    }
+    padding: 16px 60px 25px 60px;
+    border-bottom: 2px solid transparent;
+    color: $utility-black !important;
+    outline: none !important;
+}
+
+.secondaryLinkSelected {
+    @include desktop {
+        border-bottom: 2px solid $primary-accent-blue;
+    }
+}

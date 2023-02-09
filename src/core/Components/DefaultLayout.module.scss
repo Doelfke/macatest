@@ -1,0 +1,82 @@
+@import '../colors.scss';
+@import '../../core/breakpoints.scss';
+
+.pageContainer {
+    height: 100%;
+}
+
+.logoContainer {
+    padding: 20px 0 20px 30px;
+}
+
+.logo {
+    visibility: hidden;
+    @include desktop {
+        visibility: visible;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    display: inline-block;
+    top: 19px;
+    right: 20px;
+    @include widescreen {
+        display: none;
+    }
+}
+
+.navContainer {
+    display: none;
+    position: absolute;
+    right: 0;
+    @include widescreen {
+        position: relative;
+        display: block;
+        right: unset
+    }
+    padding: 20px 30px;
+    height: 100%;
+    background: $utility-white;
+    z-index: 4;
+}
+
+.navContainerOpen {
+    display: block;
+    box-shadow: 1px 4px 4px #0000007a;
+
+    @include widescreen {
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+.navContainerPageTitleInHeader {
+    display: none;
+}
+
+.contentContainerChrome {
+    flex: 1 0 0;
+    @include widescreen {
+        padding: 20px 0 0 20px;
+        background: $utility-white;
+        box-shadow: inset 2px 2px 10px rgba(219, 225, 230, 0.6);
+    }
+}
+
+.contentContainerChromeInheader {
+    background: none;
+    box-shadow: none;
+}
+
+.contentContainer {
+    height: 100%;
+    overflow-x: scroll;
+    background: $utility-white;
+    padding: 20px 20px 60px 20px;
+
+    .pageTitle {
+        font-size:28px;
+        margin-bottom: 16px;
+    }
+}

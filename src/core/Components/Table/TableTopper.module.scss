@@ -1,0 +1,29 @@
+@import '../../breakpoints.scss';
+
+.container {
+    flex-direction: column-reverse;
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    @include widescreen {
+        flex-direction: row;
+    }
+}
+
+.left {
+    margin-top: 8px;
+
+    @include widescreen {
+        min-width: 33%;
+    } 
+}
+
+.right {
+    margin-top: 8px;
+
+    @include widescreen {
+        margin-top: 0;
+    } 
+}

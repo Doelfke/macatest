@@ -1,0 +1,103 @@
+@import '../../core/colors.scss';
+
+:global {
+
+.react-selectize.default.root-node .react-selectize-control .react-selectize-placeholder {
+    top: 0;
+    color: $neutral-gray-2;
+    text-indent: 0;
+    font-size: 16px;
+}
+
+.react-selectize.default.root-node .react-selectize-control {
+    padding: 2px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.multi-select.react-selectize.default.root-node .simple-value {
+    color: $utility-black;
+    border: 1px solid $primary-brand-blue;
+    font-size: 16px;
+    background: rgba(24, 91, 246, 0.1);
+    border-radius: 5px;
+}
+
+
+.multi-select-error-message {
+    position: absolute;
+    bottom: 12px;
+    right: 42px;
+    font-size: 14px;
+    color: $primary-danger-red;
+}
+
+.react-selectize.dropdown-menu.default {
+    left: -11px;
+    width: calc(100% + 22px);
+}
+
+.react-selectize.dropdown-menu.default .option-wrapper {
+    padding: 4px;
+    border-bottom: 1px solid $neutral-gray-2;
+}
+
+.react-selectize.dropdown-menu.default .option-wrapper.highlight {
+    background: $primary-brand-blue
+}
+
+.react-selectize.dropdown-menu.default .option-wrapper .simple-option {
+    font-size: 16px;
+    color: $neutral-gray-9
+}
+
+
+.react-selectize.dropdown-menu.default .option-wrapper.highlight .simple-option {
+    color: $utility-white
+}
+
+.react-selectize.default.root-node .react-selectize-control .react-selectize-search-field-and-selected-values  {
+    padding-left: 0;
+}
+
+.multi-select-fieldset {
+    position: relative;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid $neutral-gray-3;
+    margin-bottom: 16px;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 5px;
+    color: $neutral-gray-3;
+}
+
+.multi-select-fieldset:focus-within {
+    border-color: $primary-accent-blue;
+    color: $primary-accent-blue;
+}
+
+.multi-select-fieldsetError {
+    border-color: $primary-danger-red !important;
+    color: $primary-danger-red !important;
+}
+
+.multi-select-legend {
+    position: relative;
+    height: 12px;
+    padding: 0 4px;
+    transition: all 0.3s ease;
+}
+
+.multi-select-legendHasNoValue {
+    width: 0;
+    padding: 0;
+    top: 17px;
+    color: $neutral-gray-2;
+    font-size: 16px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+}

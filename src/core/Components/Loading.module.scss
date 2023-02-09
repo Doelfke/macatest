@@ -1,0 +1,47 @@
+@import '../colors.scss';
+
+.container {
+    position: relative;
+    padding: 50px;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
+    }
+  }
+
+.outer {
+    position: absolute;
+    left: calc(50% - 75px);
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    background-color: #E7E7E7;
+    border-radius: 100%;
+
+    animation-duration: 1s;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+}
+
+.colored {
+    height: 75px;
+    width: 75px;
+    background-color: #69C4C1;
+}
+
+.inner {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 130px;
+    width: 130px;
+    background-color: $utility-white;
+    border-radius: 100%;
+}

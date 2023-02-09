@@ -1,0 +1,38 @@
+@import '../../core/colors.scss';
+
+.container {
+    width: 100%;
+    padding: 50px;
+    border: 1px dashed $neutral-gray-3;
+    text-align: center;
+}
+
+.input {
+    display: none;
+}
+
+.previewContainer {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.imageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.previewRemove {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+}
+
+.previewImage {
+    width: 100%;
+    height: auto;
+}
+
+.loading {
+    padding-bottom: 50px;
+}

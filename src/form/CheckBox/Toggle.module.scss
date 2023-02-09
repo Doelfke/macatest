@@ -1,0 +1,60 @@
+@import '../../core/colors.scss';
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+
+    user-select: none;
+    &.padBottom {
+        margin-bottom: 16px;
+    }
+}
+
+.labelContainer {
+    display: inline-block;
+    margin-right: 16px;
+}
+.secondaryLabelContainer {
+    margin-top: 4px;
+    font-size: 14px;
+    color: $neutral-gray-5;
+}
+
+.checkboxContainer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.oval {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    border: 1px solid $neutral-gray-2;
+    vertical-align: bottom;
+    background-color: $neutral-gray-0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.ovalOn {
+    background-color: $primary-brand-blue;
+    border: 1px solid $neutral-gray-2;
+}
+
+
+.circle {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 0px;
+    left: 0px;
+    border: 1px solid $neutral-gray-2;
+    background-color: $utility-white;
+    border-radius: 50%;
+}
+
+.circleOn {
+    left: 16px;
+    border: 1px solid $primary-brand-blue;
+}

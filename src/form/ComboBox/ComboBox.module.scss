@@ -1,0 +1,146 @@
+@import '../../core/colors.scss';
+
+:global {.react-selectize.default.root-node .react-selectize-control {
+    border: none;
+}
+.simple-select.react-selectize.default.root-node:not(.open) .react-selectize-control {
+    background: transparent;
+}
+.simple-select.react-selectize.default.root-node.open .react-selectize-control {
+    background: transparent;
+}
+
+.simple-select.react-selectize.default.root-node .react-selectize-control .react-selectize-placeholder {
+    display: none;
+}
+
+.simple-select.react-selectize.root-node .simple-value {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+}
+
+
+.react-selectize.root-node .react-selectize-control .react-selectize-search-field-and-selected-values {
+    min-height: 28px;
+    width: 0;
+}
+
+.react-selectize.root-node .react-selectize-control .react-selectize-search-field-and-selected-values .resizable-input {
+    height: 16px;
+    font-size: 16px;
+}
+
+
+.combo-box-fieldset {
+    position: relative;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid $neutral-gray-3;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 5px;
+    color: $neutral-gray-3;
+}
+
+
+.combo-box-fieldset.padBottom {
+    margin-bottom: 16px;
+}
+
+.combo-box-fieldset.search {
+    border: none;
+    background-color: $neutral-gray-0;
+}
+
+.combo-box-fieldset.forTable {
+    margin: 0;
+    padding: 0 16px;
+    border: none;
+}
+
+.combo-box-fieldset.forTable .react-selectize.dropdown-menu.default {
+    left: -17px;
+    width: calc(100% + 34px);
+    margin-top: 6px;
+}
+
+.combo-box-fieldset.search .combo-box-legend {
+    padding: 16px 0;
+    color: $neutral-gray-6;
+}
+
+
+.combo-box-fieldset.search .react-selectize.root-node .react-selectize-control .react-selectize-toggle-button-container {
+    display: none;
+}
+
+.combo-box-fieldset:focus-within {
+    border-color: $primary-accent-blue;
+    color: $primary-accent-blue;
+}
+
+.combo-box-fieldsetError {
+    border-color: $primary-danger-red !important;
+    color: $primary-danger-red !important;
+}
+
+.combo-box-legend {
+    position: relative;
+    height: 10px;
+    transition: all 0.3s ease;
+    transition-property: top, padding;
+    
+    &.hasLabel {
+        padding: 0 8px;
+    }
+}
+
+.combo-box-fieldset.forTable .combo-box-legend:not(.combo-box-legendHasNoValue){
+    display: none;
+}
+
+
+.combo-box-legendHasNoValue {
+    width: 0;
+    padding: 0;
+    top: 17px;
+    color: $neutral-gray-2;
+    font-size: 16px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.combo-box-fieldset.forTable .combo-box-legendHasNoValue {
+    height: 0;
+    padding: 0;
+    top: 5px;
+}
+
+.combo-box-fieldset.forTable .react-selectize.root-node .react-selectize-control .react-selectize-search-field-and-selected-values .resizable-input {
+    position: relative;
+    top: 3px;
+}
+
+.combo-box-error-message {
+    position: absolute;
+    bottom: 12px;
+    right: 42px;
+    font-size: 14px;
+    color: $primary-danger-red
+}
+
+.combo-box-fieldset.forTable .combo-box-error-message{
+    bottom: 6px;
+}
+
+.combo-box-search-icon {
+    position: absolute;
+    right: 13px;
+    bottom: 12px;
+}
+
+.combo-box-fieldset.forTable .react-selectize-control {
+    height: 28px;
+}
+
+}

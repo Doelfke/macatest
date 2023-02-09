@@ -1,0 +1,31 @@
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00000078;
+
+    z-index: 100;
+}
+
+.container {
+    max-height: 100vh;
+    padding: 40px 40px 30px 40px;
+    overflow: scroll;
+    background: white;
+}
+
+.closeContainer {
+    position: relative;
+}
+.close {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+}

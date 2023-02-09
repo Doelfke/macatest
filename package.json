@@ -1,0 +1,69 @@
+{
+  "name": "website-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/lodash.clonedeep": "^4.5.6",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router": "^3.0.13",
+    "@types/segment-analytics": "^0.0.32",
+    "antd": "4.0.4",
+    "aws-amplify": "^2.2.1",
+    "env-cmd": "^10.0.1",
+    "formik": "^2.1.1",
+    "formik-class-validator": "^0.0.1",
+    "google-libphonenumber-shim": "git+https://github.com/Doelfke/google-libphonenumber-shim.git",
+    "jsonwebtoken": "^9.0.0",
+    "lodash.clonedeep": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-dom-factories": "^1.0.2",
+    "react-router": "3.2.6",
+    "react-scripts": "3.4.0",
+    "react-selectize": "^3.0.1",
+    "react-svg-loader": "2.1.0",
+    "react-transition-group": "^1",
+    "sass": "^1.58.0",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
+    "source-map-explorer": "^2.4.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "start": "yarn generate-colors && env-cmd -f .env.local react-scripts start",
+    "build:production": "react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generate-api-types": "node typings/generateEnums.js",
+    "generate-svgs": "webpack --config webpack.icons.config.js > /dev/null 2>&1 || echo && rm -rf icons",
+    "generate-colors": "node typings/generateColors.js",
+    "analyze": "yarn build:production && source-map-explorer 'build/static/js/*.js'"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "google-libphonenumber": "git+https://github.com/Doelfke/google-libphonenumber-shim.git"
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../core/colors.scss';
+
+.container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    padding: 20px;
+
+    text-align: right;
+
+    background: white;
+    box-shadow:  rgba(219, 225, 230, 0.6) 0 0 10px
+}
+
+.spacer {
+    margin-top: 135px;
+}

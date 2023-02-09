@@ -1,0 +1,121 @@
+@import '../../core/colors.scss';
+
+.input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+}
+
+.fieldset {
+    position: relative;
+    display: inline-block;
+    padding: 4px 16px 8px;
+    border: 1px solid $neutral-gray-3;
+    
+    width: 100%;
+    font-size: 12px;
+    border-radius: 5px;
+    color: $neutral-gray-3;
+
+    &:focus-within {
+        border-color: $primary-accent-blue;
+        color: $primary-accent-blue;
+    } 
+
+    &.padBottom {
+        margin-bottom: 16px;
+    }
+
+    &.isForTable {
+        border: none;
+        margin: 0;
+        padding: 2px 16px 8px 16px;
+    }
+
+    &.isCurrency {
+        .legendHasNoValue {
+            margin-left: 16px;
+        }
+        .input {
+            margin-left: 16px;
+        }
+    }
+    &.isDisabled {
+        border-color: $neutral-gray-2;
+        color: $neutral-gray-2;
+        cursor: not-allowed;
+
+        .input {
+            color: $neutral-gray-3;
+        }
+    }
+}
+
+.fieldsetError {
+    border-color: $primary-danger-red !important;
+    color: $primary-danger-red !important;
+}
+
+.legend {
+    position: relative;
+    height: 12px;
+    transition: all 0.3s ease;
+}
+.fieldset.hasLabel .legend:not(.legendHasNoValue) {
+    padding: 0 8px;
+}
+
+
+.legendHasNoValue {
+    width: 0;
+    padding: 0;
+    top: 18px;
+    color: $neutral-gray-2;
+    font-size: 16px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.fieldset.isForTable .legendHasNoValue {
+    height: 0;
+    top: 5px;
+}
+
+.fieldset.isSearch {
+    border: 1px solid $neutral-gray-1;
+    background: $neutral-gray-1;
+       
+    .legendHasNoValue {
+        color: $neutral-gray-6;
+    }
+}
+
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+}
+
+.fieldset.isForTable .legend:not(.legendHasNoValue) {
+    display: none;
+}
+
+.inputError { 
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    color: $primary-danger-red !important;
+}
+
+.currency {
+    position: absolute;
+    top: 18px;
+    font-size: 16px; 
+    color: $neutral-gray-2;
+}
+
+.isForTable .currency {
+    top: 5px;
+}
